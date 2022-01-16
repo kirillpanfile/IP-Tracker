@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220116145448">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css?_v=20220116145448" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__title">IP Address Tracker</div>
+				<form action="" class="header__form form-header">
+					<input type="text" class="form-header__search">
+					<button class="form-header__button"><img src="img/images/icon-arrow.svg" alt=""></button>
+				</form>
+				<div class="header__info info-header">
+					<div class="info-header__container">
+						<div class="info-header__body">
+							<div class="info-header__item">
+								<div class="info-header__text">
+									<div class="info-header__find">IP Address</div>
+									<div class="info-header__descr" id="ip">0.0.0.0</div>
+								</div>
+							</div>
+							<div class="info-header__item">
+								<div class="info-header__text">
+									<div class="info-header__find">Location</div>
+									<div class="info-header__descr" id="lc">---</div>
+								</div>
+							</div>
+							<div class="info-header__item">
+								<div class="info-header__text">
+									<div class="info-header__find">TimeZone</div>
+									<div class="info-header__descr" id="tz">---</div>
+								</div>
+							</div>
+							<div class="info-header__item">
+								<div class="info-header__text">
+									<div class="info-header__find">ITP</div>
+									<div class="info-header__descr" id="itp">---</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="map">
+
+		</div>
+		<main class="page">
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js?_v=20220116145448" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	<script src="js/app.min.js?_v=20220116145448"></script>
+</body>
+
+</html>
