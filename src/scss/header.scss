@@ -1,4 +1,44 @@
 //====================================================================================================
+.header {
+	padding: 30px 0;
+	min-height: 250px;
+	background: url('../img/images/pattern-bg.png') center (center/cover) no-repeat;
+		// .header__container
+		&__container {}
+		// .header__title
+		&__title {
+			color: white;
+			text-align: center;
+			font-size: rem(35);
+			font-weight: 500;
+		}
+		// .header__form
+		&__form {
+			margin: rem(30) 0px 0px 0px;
+			text-align: center;
+		}
+		// .header__info
+		&__info {}
+}
+.form-header {
+
+	// .form-header__search
+	&__search {
+		width: 500px;
+		height: 60px;
+		cursor: pointer;
+		padding: 0 rem(30);
+		border-radius: 15px 0 0 15px;
+		font-weight: 400;
+	}
+	// .form-header__button
+	&__button {
+		background-color: $mainColor;
+		width: 50px;
+		height: 60px;
+		border-radius: 0 15px 15px 0;
+	}
+}
 
 //====================================================================================================
 
