@@ -1,84 +1,133 @@
 //====================================================================================================
 .header {
 	padding: 30px 0;
-	min-height: 250px;
+	height: 250px;
+
+	@media (max-width:$mobile) {
+		height: 300px;
+	}
+
 	background: url('../img/images/pattern-bg.png') center (center/cover) no-repeat;
-		// .header__container
-		&__container {}
-		// .header__title
-		&__title {
-			color: white;
-			text-align: center;
-			font-size: rem(35);
-			font-weight: 500;
-		}
-		// .header__form
-		&__form {
-			margin: rem(30) 0px rem(30) 0px;
-			text-align: center;
-		}
-		// .header__info
-		&__info {}
+
+	// .header__container
+	&__container {}
+
+	// .header__title
+	&__title {
+		color: white;
+		text-align: center;
+		font-size: rem(28);
+		font-weight: 500;
+	}
+
+	// .header__form
+	&__form {
+		margin: rem(30) 0px rem(30) 0px;
+		text-align: center;
+	}
+
+	// .header__info
+	&__info {}
 }
+
 .form-header {
+
 	img {
 		display: block;
 		margin: 0 auto;
 	}
+
 	// .form-header__search
 	&__search {
-		width: 500px;
-		height: 60px;
+
+		@include adaptiveValue("width", 500, 300);
+		height: 50px;
 		cursor: pointer;
-		padding: 0 rem(30);
+		padding: 0 rem(20);
 		border-radius: 15px 0 0 15px;
 		font-weight: 400;
 	}
+
 	// .form-header__button
 	&__button {
 		background-color: $mainColor;
 		width: 50px;
-		height: 60px;
+		height: rem(50);
 		border-radius: 0 15px 15px 0;
 	}
 }
+
 .info-header {
-		// .info-header__body
-		&__body {
-			display: flex;
-			justify-content: space-around;
-			align-items: flex-start;
-			margin: 0 auto;
-			height: 125px;
-			border-radius: 12px;
-			background-color: #fff;
-			padding: rem(30) rem(40) rem(30) rem(20);
+
+	// .info-header__body
+	&__body {
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+		margin: 0 auto;
+		height: 125px;
+		border-radius: 12px;
+		background-color: #fff;
+		padding: rem(30) rem(40) rem(30) rem(20);
+		z-index: 9999;
+		flex-wrap: wrap;
+
+		@media (max-width:$mobile) {
+			display: block;
+			height: auto;
+			border: none;
+			padding: rem(10) rem(20) rem(10) rem(20);
+
 		}
-		// .inf-header__text
-		&__text {
-			margin: 0px 0px 0px rem(30);
+	}
+
+	// .inf-header__text
+	&__text {
+		@include adaptiveValue("margin-left", 60, 0);
+	}
+
+	// .info-header__item
+	&__item {
+		border-left: 1px solid $secondColor;
+		height: 100%;
+
+		@media (max-width:$mobile) {
+			text-align: center;
+			margin: 20px 0;
+			border: none;
 		}
-		// .info-header__item
-		&__item {
-			border-left: 1px solid $secondColor;
-			&:first-child {
-				border: none;
+
+		&:first-child {
+			border: none;
+
+			.info-header__text {
+				margin-left: 0;
 			}
 		}
-		// .info-header__find
-		&__find {
-			margin: 0px 0px rem(10) 0px;
-			color: $secondColor;
-			font-size: rem(10);
-			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: rem(2);
+	}
+
+	// .info-header__find
+	&__find {
+		margin: 0px 0px rem(10) 0px;
+		color: $secondColor;
+		font-size: rem(10);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: rem(2);
+	}
+
+	// .info-header__descr
+	&__descr {
+		font-size: rem(22);
+		font-weight: 500;
+
+		@media (max-width:$mobile) {
+			br {
+				display: none;
+			}
 		}
-		// .info-header__descr
-		&__descr {
-			font-size: rem(22);
-			font-weight: 500;
-		}
+	}
 }
 
 
